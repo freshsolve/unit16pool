@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  player_id: 
+  opponent_id: 
+  winner: 
+
+two:
+  player_id: 
+  opponent_id: 
+  winner: 
