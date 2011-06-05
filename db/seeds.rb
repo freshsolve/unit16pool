@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+Player.create(:name => 'Chris', :twitter => 'chrisrowe')
+Player.create(:name => 'Nat', :twitter => 'nfourtythree')
+Player.create(:name => 'Jake', :twitter => 'jse247')
+
+Game.create(:player_id => 1, :opponent_id => 2, :winner => 2)

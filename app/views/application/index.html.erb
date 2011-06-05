@@ -1,6 +1,23 @@
-Homepage
+<h1>Scoreboard</h1>
 
-<ul>
-	<li><a href="/games">Games</a></li>
-	<li><a href="/players">Players</a></li>
-</ul>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Twitter</th>
+    <th>Played</th>
+    <th>Wins</th>
+    <th>Loses</th>
+    <th>Ratio</th>
+  </tr>
+
+<% @players.each do |player| %>
+  <tr>
+    <td><%= player.name %></td>
+    <td><%= player.twitter %></td>
+    <td><%= player.played %></td>
+    <td><%= player.wins %></td>
+    <td><%= player.loses %></td>
+    <td><%= player.ratio %></td>
+  </tr>
+<% end %>
+</table>
