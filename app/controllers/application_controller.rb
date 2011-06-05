@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
       player[:ratio] = ratio
     end
     
-    @players.sort_by { |player| player.ratio }
+    @players.sort! { |a,b| b.ratio <=> a.ratio }
   end
   
 

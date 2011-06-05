@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>ID</th>
     <th>Name</th>
     <th>Twitter</th>
     <th>Played</th>
@@ -12,7 +13,7 @@
 
 <% @players.each do |player| %>
   <tr>
-    <td><%= player.name %></td>
+    <td><%= player.id %></td>
     <td><%= player.twitter %></td>
     <td><%= player.played %></td>
     <td><%= player.wins %></td>
