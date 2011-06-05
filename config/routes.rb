@@ -2,6 +2,8 @@ Unit16pool::Application.routes.draw do
   resources :players
 
   resources :games
+  
+  match 'tweet' => 'application#tweet'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
