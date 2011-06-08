@@ -10,8 +10,12 @@ class ApplicationController < ActionController::Base
       player[:wins] = Game.where(:winner => player.id).count
       player[:loses] = Game.where(:loser => player.id).count
       player[:played] = player[:wins] + player[:loses]
-    
-      ratio = player[:wins]/player[:played].to_f*100
+      
+      if player[:wins] > 0 && player[:played] > 0
+        ratio = player[:wins]/player[:played].to_f*100
+      else
+        ratio = 0
+      end
       
       # if ratio.nan?
       #   ratio = 0.00
