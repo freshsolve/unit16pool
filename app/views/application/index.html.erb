@@ -2,24 +2,16 @@
 
 <section class="scoreboard">
 	<h2>Scoreboard</h2>
-	<table>
-	  <tr>
-	    <th></th>
-	    <th>Played</th>
-	    <th>Wins</th>
-	    <th>Loses</th>
-	    <th>Ratio</th>
-	  </tr>
+	<ol>
 	<% @players.each do |player| %>
-	  <tr>
-	    <th style="text-align:left"><%= player.name %></th>
-	    <td><%= player.played %></td>
-	    <td><%= player.wins %></td>
-	    <td><%= player.loses %></td>
-	    <td><%= player.ratio %></td>
-	  </tr>
+	<li>
+		<h3><%= player.name %> (<%= player.ratio %>%)</h3>
+		<span>Played:</span> <%= player.played %>
+		<span>Wins:</span> <%= player.wins %>
+		<span>Loses:</span> <%= player.loses %>
+	</li>
 	<% end %>
-	</table>
+	</ol>
 </section>
 
 

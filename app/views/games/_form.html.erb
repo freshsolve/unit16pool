@@ -13,12 +13,19 @@
 
   <div class="field">
     Winner&hellip;
-    <%= f.text_field :winner %>
+	<select id="game_winner" name="game[winner]">
+	    <% @players.each do |player| %>
+		<option value="<%= player.id %>"><%= player.name %></option>
+		<% end %>
+	</select>
   </div>
   <div class="field">
-   	loser&hellip;
-    <%= f.text_field :loser %>
-  </div>
+   	Loser&hellip;
+	<select id="game_loser" name="game[loser]">
+	    <% @players.each do |player| %>
+		<option value="<%= player.id %>"><%= player.name %></option>
+		<% end %>
+	</select>  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

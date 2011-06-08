@@ -11,21 +11,21 @@ class ApplicationController < ActionController::Base
       player[:loses] = Game.where(:loser => player.id).count
       player[:played] = player[:wins] + player[:loses]
     
-      ratio = player[:wins]/player[:played].to_f
+      ratio = player[:wins]/player[:played].to_f*100
       
-      if ratio.nan?
-        ratio = 0.00
-      else
-        ratio = (ratio*100).round/100.0
-      end
+      # if ratio.nan?
+      #   ratio = 0.00
+      # else
+      #   ratio = (ratio*100).round/100.0
+      # end
     
-      player[:ratio] = ratio
+      player[:ratio] = ratio.round
     end
     
     @players.sort! { |a,b| b.ratio <=> a.ratio }
     
     @players.each do |player|
-      if player[:ratio] == 0.0
+      if player[:ratio] == 0
         player[:ratio] = "-"
       end
     end
