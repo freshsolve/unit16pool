@@ -1,24 +1,29 @@
-<h1>Scoreboard</h1>
+<p id="notice"><%= notice %></p>
 
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Twitter</th>
-    <th>Played</th>
-    <th>Wins</th>
-    <th>Loses</th>
-    <th>Ratio</th>
-  </tr>
+<section class="scoreboard">
+	<h2>Scoreboard</h2>
+	<table>
+	  <tr>
+	    <th></th>
+	    <th>Played</th>
+	    <th>Wins</th>
+	    <th>Loses</th>
+	    <th>Ratio</th>
+	  </tr>
+	<% @players.each do |player| %>
+	  <tr>
+	    <th style="text-align:left"><%= player.name %></th>
+	    <td><%= player.played %></td>
+	    <td><%= player.wins %></td>
+	    <td><%= player.loses %></td>
+	    <td><%= player.ratio %></td>
+	  </tr>
+	<% end %>
+	</table>
+</section>
 
-<% @players.each do |player| %>
-  <tr>
-    <td><%= player.id %></td>
-    <td><%= player.twitter %></td>
-    <td><%= player.played %></td>
-    <td><%= player.wins %></td>
-    <td><%= player.loses %></td>
-    <td><%= player.ratio %></td>
-  </tr>
-<% end %>
-</table>
+
+<section class="newgame">
+	<h2>New game</h2>
+	<%= render 'games/form' %>
+</section>
