@@ -9,8 +9,7 @@
 Player.create(:name => 'Chris', :twitter => 'chrisrowe')
 Player.create(:name => 'Nat', :twitter => 'nfourtythree')
 Player.create(:name => 'Jake', :twitter => 'jse247')
-
-Game.create(:winner => 1, :loser => 2)
-Game.create(:winner => 1, :loser => 3)
-Game.create(:winner => 1, :loser => 2)
-Game.create(:winner => 1, :loser => 3)
+Player.create(:name => 'Alex', :twitter => 'alexdskelton')
+Player.create(:name => 'Paul', :twitter => 'kingofkong81')
+Player.create(:name => 'Dan', :twitter => 'hammonddan')
+Player.create(:name => 'Andy', :twitter => 'andymccorkell')
